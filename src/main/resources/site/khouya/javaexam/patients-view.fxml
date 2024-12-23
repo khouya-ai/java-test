@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="555.0" prefWidth="859.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="site.khouya.javaexam.PatientsController">
+   <children>
+      <TableView fx:id="table" layoutX="101.0" layoutY="86.0" prefHeight="380.0" prefWidth="690.0">
+        <columns>
+          <TableColumn fx:id="tableColumnID" prefWidth="45.0" text="ID" />
+          <TableColumn fx:id="tableColumnPrenom" prefWidth="77.0" text="Prenom" />
+            <TableColumn fx:id="tableColumnNom" prefWidth="103.0" text="Nom" />
+            <TableColumn fx:id="tableColumnCIN" prefWidth="75.0" text="CIN" />
+            <TableColumn fx:id="tableColumnEmail" prefWidth="128.0" text="Email" />
+            <TableColumn fx:id="tableColumnDate" prefWidth="128.0" text="Date de Recrutement" />
+            <TableColumn fx:id="tableColumnDepart" prefWidth="110.0" text="Departement" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="211.0" layoutY="474.0" prefHeight="52.0" prefWidth="399.0">
+         <children>
+             <Button onAction="#onAjouterButtonClick" prefHeight="37.0" prefWidth="72.0" text="Ajouter">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button onAction="#onModifierButtonClick" prefHeight="37.0" prefWidth="120.0" text="List Consultation">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button onAction="#onSupprimerButtonClick" prefHeight="37.0" prefWidth="72.0" text="Supprimer">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnActualiser" onAction="#onActualiserButtonClick" prefHeight="37.0" prefWidth="72.0" text="Actualiser" />
+         </children>
+      </HBox>
+      <TextField fx:id="SearchTextField" layoutX="211.0" layoutY="41.0" prefHeight="25.0" prefWidth="201.0" />
+      <Button layoutX="446.0" layoutY="41.0" mnemonicParsing="false" onAction="#onSearchButtonClicked" text="Chercher" />
+   </children>
+</AnchorPane>
